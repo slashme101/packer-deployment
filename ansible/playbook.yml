@@ -1,0 +1,9 @@
+---
+- name: Configure Golden Image
+  hosts: all
+  become: true
+
+  roles:
+    - common
+    - security
+    - monitoring

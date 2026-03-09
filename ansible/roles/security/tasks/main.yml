@@ -1,0 +1,11 @@
+---
+- name: Disable root ssh login
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^PasswordAuthentication'
+    line: 'PAsswordAuthentication no'
+
+- name: Restart SSH
+  service:
+    name: ssh
+    state: restarted
